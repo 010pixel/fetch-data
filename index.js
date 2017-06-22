@@ -1,7 +1,6 @@
 'use strict';
 
-var server_port = process.env.PORT || 8080;
-server_port = 9000;
+var server_port = process.env.PORT || 9000;
  
 var http = require('http');
 var fetchUrl = require("fetch").fetchUrl;
