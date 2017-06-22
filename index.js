@@ -14,11 +14,16 @@ var server = http.createServer(function(req, res) {
 	var url_parts = url.parse(req.url,true);
 	var google_sheet_id = url_parts.query.google_sheet_id;
 	var gid = url_parts.query.gid;
-	var load_type = url_parts.query.load_type;
+	var load_type = url_parts.query.load_type || 'json';
 
 	if ( !google_sheet_id || !gid || !load_type ) {
 
+		res.setHeader('content-type', 'text/html');
+
 		res.write("Please pass necessary parameters.");
+		res.write("<br /><b>google_sheet_id</b>: ID of the google spreadsheet");
+		res.write("<br /><b>gid</b>: ID of the Tab in google spreadsheet");
+		res.write("<br /><b>load_type</b>: csv, tsv, json | default: json");
 		res.end();
 
 	} else {
