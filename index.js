@@ -1,6 +1,8 @@
 'use strict';
 
-var http = require('http');
+var server_port = process.env.PORT || 8080
+ 
+ var http = require('http');
 var fetchUrl = require("fetch").fetchUrl;
 var url = require("url");
 
@@ -30,7 +32,7 @@ var server = http.createServer(function(req, res) {
 		});
 	}
 });
-server.listen(9000);
+server.listen(server_port);
 
 // var fetch = require('node-fetch');
 // if you are on node v0.10, set a Promise library first, eg. 
