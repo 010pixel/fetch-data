@@ -4,7 +4,7 @@
   "description": "fetch data from a url",
   "main": "index.js",
   "scripts": {
-    "start": "npm install; firebase serve; node index.js"
+    "start": "npm install; node index.js"
   },
   "author": "",
   "license": "ISC",
