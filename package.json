@@ -1,0 +1,16 @@
+{
+  "name": "node-fetch-url",
+  "version": "1.0.0",
+  "description": "fetch data from a url",
+  "main": "index.js",
+  "scripts": {
+    "start": "npm install; firebase serve; node index.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "fetch": "^1.1.0",
+    "http": "0.0.0",
+    "url": "^0.11.0"
+  }
+}
